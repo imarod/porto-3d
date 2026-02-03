@@ -54,7 +54,7 @@ const About = () => {
   ];
 
   return (
-    <div className='mt-[20vh] mx-auto c-space max-w-7xl justify-center'>
+    <div className='mx-auto c-space max-w-7xl justify-center'>
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}>

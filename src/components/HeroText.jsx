@@ -1,75 +1,31 @@
 import { FlipWords } from "./FlipWord"
-import { motion } from "motion/react"
+import { motion, useScroll, useSpring, useTransform } from "motion/react"
 
 
 const HeroText = () => {
-  const words = ["Secure", "Modern", "Scalable"]
-  const variants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 },
-  }
+  const { scrollYProgress } = useScroll()
+  const x = useSpring(scrollYProgress, { damping: 30 })
+  const mountain3Y = useTransform(x, [0, 0.1], ["0%", "100%"])
   return (
-    <div className="z-10 mt-20 text-center md:mt-40 md:text-left rounded-3xl bg-clip-text">
+    <div className="relative min-h-screen flex items-center justify-center text-center -z-50 md:-translate-y-[23vh] -translate-x-0 md:-translate-x-10 ">
       {/* Desktop View */}
       <div className="flex-col hidden md:flex c-space">
         <motion.h1
-          className="text-4xl font-medium"
-          variants={variants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 1 }}>
+          className="font-poster font-black uppercase tracking-tighter leading-none transform scale-x-90 text-[9rem] bg-gradient-to-r from-[#e6a99a] via-[#f2c8a5] to-[#f9e8d5] bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(255,210,170,0.6)] drop-shadow-[0_0_40px_rgba(255,170,140,0.3)]"
+          style={{y:mountain3Y}}
+         >
           Hi I'm Dyah</motion.h1>
-        <div className="flex flex-col items-start">
-
-          <motion.p
-            className="text-5xl font-medium text-neutral-300"
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 1.2 }}
-          >A Developer<br /> Dedicated to Crafting</motion.p>
-
-          <motion.div
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 1.5 }}
-          ><FlipWords words={words} className="font-black text-white text-8xl" /></motion.div>
-
-          <motion.p
-            className="text-4xl font-medium text-neutral-300"
-            variants={variants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 1.8 }}
-          >Web Solutions</motion.p>
-        </div>
       </div>
 
       {/* Mobile View */}
-      <div className="flex flex-col space-y-6 md:hidden">
-        <motion.p className="text-4xl font-medium"
-        variants={variants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 1 }}>Hi I'm Dyah</motion.p>
-        <div>
-          <motion.p className="text-5xl font-black text-neutral-300"
-          variants={variants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 1.2 }}>Building</motion.p>
-          <motion.div
-          variants={variants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 1.5 }}><FlipWords words={words} className="font-black text-white text-7xl" /></motion.div>
-          <motion.p className="text-4xl font-black text-neutral-300"
-          variants={variants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 1.8 }}>Web Aplications</motion.p>
-        </div>
+      <div className="flex flex-col md:hidden">
+        <motion.h1
+          className="font-poster font-black uppercase tracking-tighter leading-none scale-x-90 text-[3.5rem] sm:text-[4.5rem] px-4 -translate-y-[10vh]
+          bg-gradient-to-r from-[#e6a99a] via-[#f2c8a5] to-[#f9e8d5] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(255,210,170,0.6)] drop-shadow-[0_0_30px_rgba(255,170,140,0.3)] text-center "
+         style={{y:mountain3Y}}
+        >
+          Hi I'm Dyah
+        </motion.h1>
       </div>
     </div>
   )

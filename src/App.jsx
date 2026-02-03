@@ -10,7 +10,7 @@ import ProjectCard from './sections/Works'
 
 const App = () => {
   return (
-    <div className="div">
+    <div className="">
       <div className='container mx-auto max-w-7xl'>
         <Navbar />
         <Hero />
@@ -23,7 +23,7 @@ const App = () => {
       
       footer */}
       </div>
-      <div className="relative z-0">
+      <div className="relative z-0 ">
         {/* <GalaxyCanvas /> */}
         <About />
         <ProjectCard />

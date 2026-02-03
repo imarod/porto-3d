@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&display=swap');
 @import "tailwindcss";
 @theme {
   --color-primary: #030412;
@@ -15,6 +16,9 @@
   --color-sand: #d6995c;
   --color-coral: #ea4884;
   --animate-orbit: orbit 50s linear infinite;
+
+  --font-poster: "Big Shoulders Display", sans-serif;
+  --font-funnel: "Funnel Display", sans-serif;
   @keyframes orbit {
     0% {
       transform: rotate(calc(var(--angle) * 1deg))
@@ -49,7 +53,7 @@
 }
 body {
   background: #030412;
-  font-family: "Funnel Display", sans-serif;
+  font-family: var(--font-funnel);
   color: white;
   scroll-behavior: smooth;
   overflow-x: hidden;
