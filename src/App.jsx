@@ -7,39 +7,24 @@ import StarsCanvas from './components/canvas/Stars'
 import Tech from './sections/Tech'
 import Works from './sections/Works'
 import ProjectCard from './sections/Works'
-
 const App = () => {
   return (
-    <div className="">
+    <div className="relative z-0 bg-primary">
+      <StarsCanvas />
+
       <div className='container mx-auto max-w-7xl'>
         <Navbar />
         <Hero />
-
-        {/* 
-      
-      projects
-      experience
-      testimoni
-      
-      footer */}
       </div>
-      <div className="relative z-0 ">
-        {/* <GalaxyCanvas /> */}
+
+      <div className="relative z-0">
         <About />
         <ProjectCard />
         <Tech />
-
         <Contact />
-
-        <StarsCanvas />
-
       </div>
-      <section className='min-h-screen'></section>
+      
     </div>
-
-
-
-
   )
 }
 

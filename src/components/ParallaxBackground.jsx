@@ -1,59 +1,87 @@
 import { motion, useScroll, useSpring, useTransform } from "motion/react"
 import HeroText from "./HeroText"
 
-
 const ParallaxBackground = () => {
   const { scrollYProgress } = useScroll()
   const x = useSpring(scrollYProgress, { damping: 50 })
-  const mountain3Y = useTransform(x, [0, 0.5], ["0%", "50%"])
-  const planetsX = useTransform(x, [0, 0.5], ["0%", "-20%"])
-  const mountain2Y = useTransform(x, [0, 0.5], ["0%", "20%"])
-  const mountain1Y = useTransform(x, [0, 0.3], ["0%", "30%"])
+
+  const mountain3Y = useTransform(x, [0, 0.5], ["0%", "30%"])
+  const planetsY = useTransform(x, [0, 0.5], ["0%", "-40%"]) 
+  const pinkclouds2Y = useTransform(x, [0, 0.5], ["0%", "15%"])
+  const mountainY = useTransform(x, [0, 0.5], ["0%", "10%"])
+
   return (
-    <section className="absolute inset-0 ">
-      <div className="relative h-screen overflow-y-hidden">
-        {/* Background Sky */}
+    <section className="absolute inset-0 w-full h-screen overflow-hidden">
+      <div className="relative h-full w-full">
+
+        {/* 1. Background Sky*/}
         <div
-          className="absolute inset-0 w-full h-screen -z-60"
+          className="absolute inset-0 z-0"
           style={{
-            backgroundImage: "url(assets/bg-reallygood.png)",
-            backgroundPosition: "bottom",
+            backgroundImage: "url(assets/fix-bg.png)",
+            backgroundPosition: "center bottom",
             backgroundSize: "cover",
-          }} />
-          <div
-          className="absolute  w-full h-screen -z-40"
+          }}
+        />
+
+        {/* 2. Saturn*/}
+        <motion.div
+          className="absolute top-[15%] md:top-[20%] left-[10%] md:left-[-5%] w-[35%] md:w-[33%] z-10"
+          style={{ y: planetsY }}
+        >
+          <img src="assets/saturn.png" alt="saturn" className="w-full h-auto" />
+        </motion.div>
+
+
+        {/* 4. Moon/Overlay  */}
+        <div
+          className="absolute inset-0 z-20 pointer-events-none"
           style={{
-            backgroundImage: "url(assets/clouds-main2.png)",
-            backgroundPosition: "bottom",
+            backgroundImage: "url(assets/moon.png)",
+            backgroundPosition: "center bottom",
             backgroundSize: "cover",
-          }} />
+          }}
+        />
 
-          <HeroText />
+        <HeroText />
 
-          <motion.img
+        {/* 6. Clouds - */}
+        {/* <motion.img
           src="assets/clouds-random.png"
-          className="absolute bottom-[20vh]  left:0 md:left-[-40vh]  w-full h-auto md:bottom-[-30vh] -z-30 "
-          style={{ y: mountain1Y }}
-          />
+          className="absolute bottom-[20%] md:bottom-[-40%] left-0 md:left-[-25vh] w-full min-w-[120%] h-auto z-30 object-cover"
+          style={{ y: pinkclouds2Y, x: "-10%" }}
+        /> */}
 
-
-          <motion.img
-          src="assets/clouds-random.png"
-          className="absolute bottom-[20vh]  left:0 md:left-[-10vh]  w-full h-auto md:bottom-[-20vh] -z-35 "
-          style={{ y: mountain2Y }}
-          />
-       
-
-
-
-        <motion.div className="absolute inset-0 -z-20"
+        {/* 7. Mountains 1 (White 1) */}
+        <motion.div
+          className="absolute inset-0 z-40"
           style={{
-            backgroundImage: "url(assets/mountains-white.png)",
-            backgroundPosition: "bottom",
+            backgroundImage: "url(assets/mountains-white1.png)",
+            backgroundPosition: "bottom center",
             backgroundSize: "cover",
             y: mountain3Y
-          }} />
-      
+          }}
+        />
+
+        {/* 8. Mountains 2 (White 2 - Layer Paling Depan) */}
+        <motion.div
+          className="absolute inset-0 z-50"
+          style={{
+            backgroundImage: "url(assets/mountains-white2.png)",
+            backgroundPosition: "bottom center",
+            backgroundSize: "cover",
+            y: mountainY
+          }}
+        />
+
+        {/* Layer Gradasi (Fog) di atas kaki gunung */}
+        <div
+          className="absolute inset-x-0 bottom-0 z-[51] pointer-events-none"
+          style={{
+            height: '13vh', 
+            background: 'linear-gradient(to top, #030412 0%, rgba(3, 4, 18, 0.5) 40%, transparent 100%)'
+          }}
+        />
       </div>
     </section>
   )

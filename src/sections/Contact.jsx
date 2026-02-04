@@ -23,7 +23,7 @@ const Contact = () => {
 
 
   return (
-    <div className='mt-[20vh] c-space mx-auto max-w-7xl justify-center  xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
+    <div className=' mt-4 md:mt-[20vh] c-space mx-auto max-w-7xl justify-center  xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className='flex-[0.75] bg-[#100d25] p-8 rounded-2xl'>
