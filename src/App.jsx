@@ -7,6 +7,8 @@ import StarsCanvas from './components/canvas/Stars'
 import Tech from './sections/Tech'
 import Works from './sections/Works'
 import ProjectCard from './sections/Works'
+import Footer from './sections/Footer'
+
 const App = () => {
   return (
     <div className="relative z-0 bg-primary">
@@ -21,7 +23,9 @@ const App = () => {
         <About />
         <ProjectCard />
         <Tech />
+      
         <Contact />
+        <Footer/>
       </div>
       
     </div>

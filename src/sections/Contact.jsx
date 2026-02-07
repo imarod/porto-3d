@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { EarthCanvas, RocketCanvas } from '../components/canvas'
+import { RocketCanvas } from '../components/canvas'
 import { slideIn } from '../utils/motions'
 
 

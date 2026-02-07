@@ -1,16 +1,19 @@
 import { useState, useRef, Suspense } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
+import * as THREE from "three";
+
+
 import * as random from "maath/random/dist/maath-random.esm";
 
 const Stars = (props) => {
   const ref = useRef();
-  const [sphere] = useState(() => random.inSphere(new Float32Array(15000*3), { radius: 2 }));
+  const [sphere] = useState(() => random.inSphere(new Float32Array(15000 * 3), { radius: 7 }));
+  const texture = useLoader(THREE.TextureLoader, "/public/cyan-blue.png")
 
   useFrame((state, delta) => {
-  ref.current.rotation.x += delta / 17; 
-    
-    // Matikan atau perkecil sumbu Y agar tidak terlalu banyak goyangan ke samping
+    ref.current.rotation.x += delta / 17;
+
     ref.current.rotation.y = 0;
   });
 
@@ -19,10 +22,12 @@ const Stars = (props) => {
       <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
         <PointMaterial
           transparent
+          map={texture}
           color='#f272c8'
-          size={0.002}
+          size={0.01}
           sizeAttenuation={true}
           depthWrite={false}
+          blending={THREE.AdditiveBlending}
         />
       </Points>
     </group>
@@ -35,6 +40,7 @@ const StarsCanvas = () => {
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Suspense fallback={null}>
           <Stars />
+
         </Suspense>
 
         <Preload all />

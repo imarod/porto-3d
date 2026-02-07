@@ -140,3 +140,130 @@ body {
 .field-input-focus {
   @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20;
 }
+
+.card-gradient {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+
+.card-gradient::before,
+.card-gradient::after {
+  content: "";
+  position: absolute;
+  top: -1.5px; 
+  left: -1.5px;
+  right: -1.5px;
+  bottom: -1.5px;
+  border-radius: inherit;
+  opacity: 0;
+  transition: 0s ease-in-out;
+  z-index: -2;
+}
+
+.card-gradient::before {
+  background: 
+    linear-gradient(#100d25, #100d25) padding-box, 
+    conic-gradient(
+      from var(--border-angle),
+       #ffffff,
+       #bf8cf2,
+       #f597b9, 
+       #ffffff
+    ) border-box;
+  
+  border: 1.5px solid transparent;
+  z-index: -1;
+}
+
+.card-gradient::after {
+  background: conic-gradient(
+    from var(--border-angle),
+       #ffffff,
+       #bf8cf2,
+       #f597b9,
+       #ffffff
+  );
+  filter: blur(4px);
+  z-index: -2;
+}
+
+.card-gradient:hover::before,
+.card-gradient:hover::after {
+  opacity: 1;
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card-gradient:hover::before,
+.card-gradient:hover::after {
+  animation: bg-spin 3s linear infinite;
+}
+
+@keyframes bg-spin {
+  to {
+    --border-angle: 360deg;
+  }
+}
+
+
+
+.tech-stack-gradient {
+  position: relative;
+  z-index: 1;
+  background: rgba(16, 13, 37, 0.6); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-stack-gradient::before,
+.tech-stack-gradient::after {
+  content: "";
+  position: absolute;
+  top: -1px; 
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-radius: 50%; 
+  opacity: 1; 
+  z-index: -1;
+  
+
+  animation: bg-spin 6s linear infinite;
+}
+
+.tech-stack-gradient::before {
+  background: 
+    linear-gradient(rgba(16, 13, 37, 1), rgba(16, 13, 37, 1)) padding-box, 
+    conic-gradient(
+      from var(--border-angle),
+      #ffffff,
+      #bf8cf2,
+      #f597b9, 
+      #ffffff 
+
+      /* #8fe4fe,
+      */
+    ) border-box;
+  border: 1px solid transparent;
+}
+
+.tech-stack-gradient::after {
+  background: conic-gradient(
+    from var(--border-angle),
+    #ffffff,
+    #bf8cf2,
+    #f597b9,
+    #ffffff 
+   /* #8fe4fe,
+    */
+    
+  );
+  filter: blur(3px);
+  z-index: -2;
+}

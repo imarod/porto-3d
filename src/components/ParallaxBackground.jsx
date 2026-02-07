@@ -15,14 +15,14 @@ const ParallaxBackground = () => {
       <div className="relative h-full w-full">
 
         {/* 1. Background Sky*/}
-        <div
+        {/* <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: "url(assets/fix-bg.png)",
+            backgroundImage: "url(assets/bg-loseless.webp)",
             backgroundPosition: "center bottom",
             backgroundSize: "cover",
           }}
-        />
+        /> */}
 
         {/* 2. Saturn*/}
         <motion.div

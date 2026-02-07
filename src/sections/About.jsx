@@ -63,7 +63,7 @@ const About = () => {
       </motion.div>
       <motion.p
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
-        I have an educational background in Information Technology, complemented by a strong passion for coding and proven experience in building web applications. I am a detail-oriented coder, a problem-solving thinker, and a collaborative communicator.
+       I have an educational background in Information Technology, complemented by a strong passion for coding and proven experience in building web applications. I am a detail-oriented coder, a problem-solving thinker, and a collaborative communicator. Furthermore, I am deeply committed to crafting unique, modern web designs that provide a distinctive visual identity while maintaining a seamless and engaging user experience.
       </motion.p>
 
       {/* <div className='mt-20 flex flex-wrap gap-10'>

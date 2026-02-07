@@ -83,15 +83,15 @@ const ProjectCard = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                     >
                         <p className=" uppercase tracking-wider text-sm">My Work</p>
-                        <h2 className='text-5xl md:text-6xl font-bold text-white'>Projects.</h2>
+                        <h2 className='text-5xl md:text-6xl font-bold text-white'>Projects</h2>
                     </motion.div>
 
                     {/* Custom Navigation Buttons */}
                     <div className="hidden md:flex gap-4 mb-2">
-                        <button className="swiper-prev-btn p-3 rounded-full border hover:bg-[#151030] hover:text-white transition-all">
+                        <button className="card-gradient bg-[#100d25]/60 border-white/40 transition-all duration-300 swiper-prev-btn p-3 rounded-full border  hover:border-transparent transition-all">
                             <ChevronLeft size={24} />
                         </button>
-                        <button className="swiper-next-btn p-3 rounded-full border hover:bg-[#151030] hover:text-white transition-all">
+                        <button className="card-gradient bg-[#100d25]/60 border-white/40 transition-all duration-300 swiper-next-btn p-3 rounded-full border  hover:border-transparent transition-all">
                             <ChevronRight size={24} />
                         </button>
                     </div>
@@ -125,15 +125,15 @@ const ProjectCard = () => {
                     className=" mt-8"
                 >
                     {projects.map((project, index) => (
-                        <SwiperSlide key={index} className="flex justify-center">
-                            <div className="bg-[#100d25]/70 backdrop-blur-md p-5 rounded-2xl w-full md:max-w-none border border-white/20 transition-all duration-300 group hover:border-purple-400/50 hover:shadow-[0_0_20px_5px_rgba(168,85,247,0.2)]">
+                        <SwiperSlide key={index} className="flex justify-center p-2">
+                            <div className="card-gradient bg-[#100d25]/60 p-5 rounded-2xl w-full md:max-w-none border border-white/40 transition-all duration-300 group hover:border-transparent ">
 
                                 {/* Gambar dengan Overlay Link */}
-                                <div className="relative w-full h-[230px] overflow-hidden rounded-xl">
+                                <div className="relative w-full h-[230px] overflow-hidden rounded-xl duration-500  group-hover:scale-102">
                                     <img
                                         src={project.image}
                                         alt={project.title}
-                                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                                        className="w-full h-full object-cover "
                                     />
                                     <div className="absolute inset-0 flex justify-end m-3">
                                         <div
