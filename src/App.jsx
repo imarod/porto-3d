@@ -7,7 +7,7 @@ import Tech from './sections/Tech'
 import ProjectCard from './sections/Works'
 import Footer from './sections/Footer'
  const StarsCanvas = lazy(() => import ('./components/canvas/Stars'))
- 
+
 const App = () => {
  
   return (
@@ -21,7 +21,9 @@ const App = () => {
       </div>
 
       <div className="relative z-0">
-         <StarsCanvas />
+       <Suspense fallback={<div className="text-white text-center">Loading Animation...</div>}>
+          <StarsCanvas />
+        </Suspense>
         <About />
         <ProjectCard />
         <Tech />
