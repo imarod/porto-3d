@@ -6,9 +6,10 @@ import Contact from './sections/Contact'
 import Tech from './sections/Tech'
 import ProjectCard from './sections/Works'
 import Footer from './sections/Footer'
-
+ const StarsCanvas = lazy(() => import ('./components/canvas/Stars'))
+ 
 const App = () => {
-  const StarsCanvas = lazy(() => import ('./components/canvas/Stars'))
+ 
   return (
     <div className="relative z-0 bg-primary">
      
