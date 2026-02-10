@@ -14,10 +14,10 @@ const projects = [
         description: "A fullstack admissions management system for MAS Al Muhajirin that provides automated status notifications for applicants.",
         image: "assets/projects/ppdb.webp",
         tech: [
-            { name: "Laravel", icon: "/assets/tech/laravel.svg" },
-            { name: "Vite Js", icon: "/assets/tech/vite.svg" },
-            { name: "MySql", icon: "/assets/tech/mysql.svg" },
-            { name: "Tailwind", icon: "/assets/tech/tailwind.png" }
+            { name: "Laravel", icon: "assets/tech/laravel.svg" },
+            { name: "Vite Js", icon: "assets/tech/vite.svg" },
+            { name: "MySql", icon: "assets/tech/mysql.svg" },
+            { name: "Tailwind", icon: "assets/tech/tailwind.png" }
         ],
         link: "https://www.ppdb.ma-muhajirintgm.sch.id/"
     },
@@ -26,10 +26,10 @@ const projects = [
         description: "A React-based app for managing, categorizing, and searching books with dynamic state management and modern UI",
         image: "assets/projects/bookshelf.png",
         tech: [
-            { name: "React", icon: "/assets/tech/reactjs.png" },
-            { name: "Vite Js", icon: "/assets/tech/vite.svg" },
-            { name: "Javascript", icon: "/assets/tech/javascript.png" },
-            { name: "Tailwind", icon: "/assets/tech/tailwind.png" }
+            { name: "React", icon: "assets/tech/reactjs.png" },
+            { name: "Vite Js", icon: "assets/tech/vite.svg" },
+            { name: "Javascript", icon: "assets/tech/javascript.png" },
+            { name: "Tailwind", icon: "assets/tech/tailwind.png" }
         ],
         link: "https://imarod.github.io/Bookshelf/"
     },
@@ -38,9 +38,9 @@ const projects = [
         description: "A restaurant catalog app utilizing IndexedDB for offline data storage, showcasing restaurant details, and tested with Jest for reliability.",
         image: "assets/projects/resto.png",
         tech: [
-            { name: "Javascript", icon: "/assets/tech/javascript.png" },
-            { name: "Webpack", icon: "/assets/tech/webpack.svg" },
-            { name: "Jest", icon: "/assets/tech/jest.svg" }
+            { name: "Javascript", icon: "assets/tech/javascript.png" },
+            { name: "Webpack", icon: "assets/tech/webpack.svg" },
+            { name: "Jest", icon: "assets/tech/jest.svg" }
         ],
         link: "https://web-testing-alpha.vercel.app/"
     },
@@ -49,10 +49,10 @@ const projects = [
         description: "A React-based web app for adding, deleting, and searching notes, utilizing state to manage data and array map to display the note list.",
         image: "assets/projects/noteapp.png",
         tech: [
-            { name: "React", icon: "/assets/tech/reactjs.png" },
-            { name: "Vite Js", icon: "/assets/tech/vite.svg" },
-            { name: "Javascript", icon: "/assets/tech/javascript.png" },
-            { name: "CSS", icon: "/assets/tech/css.png" }
+            { name: "React", icon: "assets/tech/reactjs.png" },
+            { name: "Vite Js", icon: "assets/tech/vite.svg" },
+            { name: "Javascript", icon: "assets/tech/javascript.png" },
+            { name: "CSS", icon: "assets/tech/css.png" }
         ],
         link: "https://imarod.github.io/notes-app/"
     },
@@ -61,10 +61,10 @@ const projects = [
         description: "A web app for searching alcoholic beverages via API, displaying detailed drink info with a responsive and dynamic UI.",
         image: "assets/projects/drink.png",
         tech: [
-            { name: "Javascript", icon: "/assets/tech/javascript.png" },
-            { name: "Postman", icon: "/assets/tech/postman.svg" },
-            { name: "Webpack", icon: "/assets/tech/webpack.svg" },
-            { name: "CSS", icon: "/assets/tech/css.png" }
+            { name: "Javascript", icon: "assets/tech/javascript.png" },
+            { name: "Postman", icon: "assets/tech/postman.svg" },
+            { name: "Webpack", icon: "assets/tech/webpack.svg" },
+            { name: "CSS", icon: "assets/tech/css.png" }
         ],
         link: "https://imarod.github.io/Cocktail-Recipes/"
     },
