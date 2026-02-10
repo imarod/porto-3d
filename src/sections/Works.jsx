@@ -12,7 +12,7 @@ const projects = [
     {
         title: "PPDB MAS Al Muhajirin",
         description: "A fullstack admissions management system for MAS Al Muhajirin that provides automated status notifications for applicants.",
-        image: "/assets/projects/ppdb.webp",
+        image: "assets/projects/ppdb.webp",
         tech: [
             { name: "Laravel", icon: "/assets/tech/laravel.svg" },
             { name: "Vite Js", icon: "/assets/tech/vite.svg" },
@@ -24,7 +24,7 @@ const projects = [
     {
         title: "Bookshelf App",
         description: "A React-based app for managing, categorizing, and searching books with dynamic state management and modern UI",
-        image: "/assets/projects/bookshelf.png",
+        image: "assets/projects/bookshelf.png",
         tech: [
             { name: "React", icon: "/assets/tech/reactjs.png" },
             { name: "Vite Js", icon: "/assets/tech/vite.svg" },
@@ -36,7 +36,7 @@ const projects = [
     {
         title: "Restaurants Catalog",
         description: "A restaurant catalog app utilizing IndexedDB for offline data storage, showcasing restaurant details, and tested with Jest for reliability.",
-        image: "/assets/projects/resto.png",
+        image: "assets/projects/resto.png",
         tech: [
             { name: "Javascript", icon: "/assets/tech/javascript.png" },
             { name: "Webpack", icon: "/assets/tech/webpack.svg" },
@@ -47,7 +47,7 @@ const projects = [
     {
         title: "Notes App",
         description: "A React-based web app for adding, deleting, and searching notes, utilizing state to manage data and array map to display the note list.",
-        image: "/assets/projects/noteapp.png",
+        image: "assets/projects/noteapp.png",
         tech: [
             { name: "React", icon: "/assets/tech/reactjs.png" },
             { name: "Vite Js", icon: "/assets/tech/vite.svg" },
@@ -59,7 +59,7 @@ const projects = [
     {
         title: "ColdBrew",
         description: "A web app for searching alcoholic beverages via API, displaying detailed drink info with a responsive and dynamic UI.",
-        image: "/assets/projects/drink.png",
+        image: "assets/projects/drink.png",
         tech: [
             { name: "Javascript", icon: "/assets/tech/javascript.png" },
             { name: "Postman", icon: "/assets/tech/postman.svg" },
