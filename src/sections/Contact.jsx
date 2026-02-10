@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { useState, lazy } from 'react'
 import { motion } from 'framer-motion'
-import { RocketCanvas } from '../components/canvas'
 import { slideIn } from '../utils/motions'
 
 
 
 const Contact = () => {
+  const RocketCanvas = lazy(() => import('../components/canvas/Rocket'));
   const [result, setResult] = useState("");
   const onSubmit = async (event) => {
     event.preventDefault()

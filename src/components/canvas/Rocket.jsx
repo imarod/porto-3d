@@ -2,7 +2,7 @@
 
 import React, { Suspense, useState, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { OrbitControls, Preload, useGLTF, PerspectiveCamera } from '@react-three/drei'
+import { OrbitControls, useGLTF, PerspectiveCamera } from '@react-three/drei'
 import CanvasLoader from '../Loader'
 
 const Rocket = () => {
@@ -109,7 +109,7 @@ const RocketCanvas = () => {
           enableZoom={false}
           autoRotate={false}
         />
-        <Preload all />
+        
       </Suspense>
     </Canvas>
   )

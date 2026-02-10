@@ -3,12 +3,12 @@ import Navbar from './sections/Navbar'
 import Hero from './sections/Hero'
 import About from './sections/About'
 import Contact from './sections/Contact'
-const StarsCanvas = lazy(() => import ('./components/canvas/Stars'))
 import Tech from './sections/Tech'
 import ProjectCard from './sections/Works'
 import Footer from './sections/Footer'
 
 const App = () => {
+  const StarsCanvas = lazy(() => import ('./components/canvas/Stars'))
   return (
     <div className="relative z-0 bg-primary">
      
