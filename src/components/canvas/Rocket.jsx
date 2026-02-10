@@ -6,7 +6,7 @@ import { OrbitControls, Preload, useGLTF, PerspectiveCamera } from '@react-three
 import CanvasLoader from '../Loader'
 
 const Rocket = () => {
-  const { scene: rocket } = useGLTF('/rocket/scene.gltf')
+  const { scene: rocket } = useGLTF('rocket/scene.gltf')
   const rocketRef = useRef();
   const lightRef = useRef();
 

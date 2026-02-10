@@ -4,56 +4,56 @@ const Tech = () => {
   const technologies = [
     {
       name: "HTML 5",
-      icon: "/assets/tech/html.png",
+      icon: "assets/tech/html.png",
     },
     {
       name: "CSS 3",
-      icon: "/assets/tech/css.png",
+      icon: "assets/tech/css.png",
     },
     {
       name: "JavaScript",
-      icon: "/assets/tech/javascript.png",
+      icon: "assets/tech/javascript.png",
     },
     {
       name: "TypeScript",
-      icon: "/assets/tech/typescript.png",
+      icon: "assets/tech/typescript.png",
     },
     {
       name: "React JS",
-      icon: "/assets/tech/reactjs.png",
+      icon: "assets/tech/reactjs.png",
     },
     // {
     //   name: "Redux Toolkit",
-    //   icon: "/assets/tech/redux.png",
+    //   icon: "assets/tech/redux.png",
     // },
     {
       name: "Tailwind CSS",
-      icon: "/assets/tech/tailwind.png",
+      icon: "assets/tech/tailwind.png",
     },
     {
       name: "Node JS",
-      icon: "/assets/tech/nodejs.png",
+      icon: "assets/tech/nodejs.png",
     },
     {
       name: "Laravel",
-      icon: "/assets/tech/laravel.svg",
+      icon: "assets/tech/laravel.svg",
     },
     {
       name: "Three JS",
-      icon: "/assets/tech/threejs.svg",
+      icon: "assets/tech/threejs.svg",
     },
     {
       name: "git",
-      icon: "/assets/tech/git.png",
+      icon: "assets/tech/git.png",
     },
     {
       name: "figma",
-      icon: "/assets/tech/figma.png",
+      icon: "assets/tech/figma.png",
     },
 
     // {
     //   name: "docker",
-    //   icon: "/assets/tech/docker.png",
+    //   icon: "assets/tech/docker.png",
     // },
   ];
 

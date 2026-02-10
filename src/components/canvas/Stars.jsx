@@ -8,7 +8,7 @@ import { inSphere } from "maath/random/dist/maath-random.esm";
 const Stars = (props) => {
   const ref = useRef();
   const [sphere] = useState(() => inSphere(new Float32Array(15000 * 3), { radius: 7 }));
-  const texture = useLoader(TextureLoader, "/cyan-blue.webp")
+  const texture = useLoader(TextureLoader, "cyan-blue.webp")
 
   useFrame((state, delta) => {
     ref.current.rotation.x += delta / 17;
