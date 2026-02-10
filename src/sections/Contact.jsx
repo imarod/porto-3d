@@ -1,4 +1,4 @@
-import { useState, lazy } from 'react'
+import { useState, lazy, Suspense } from 'react'
 import { motion } from 'framer-motion'
 import { slideIn } from '../utils/motions'
 
