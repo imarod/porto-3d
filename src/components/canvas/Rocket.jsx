@@ -6,7 +6,10 @@ import { OrbitControls, useGLTF, PerspectiveCamera } from '@react-three/drei'
 import CanvasLoader from '../Loader'
 
 const Rocket = () => {
-  const { scene: rocket } = useGLTF('rocket/scene.gltf')
+  const { scene: rocket } = useGLTF(
+  'rocket/rocket.glb', 
+  'https://www.gstatic.com/draco/versioned/decoders/1.5.5/'
+)
   const rocketRef = useRef();
   const lightRef = useRef();
 
