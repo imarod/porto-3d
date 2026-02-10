@@ -232,8 +232,6 @@ body {
   border-radius: 50%; 
   opacity: 1; 
   z-index: -1;
-  
-
   animation: bg-spin 6s linear infinite;
 }
 
@@ -244,11 +242,12 @@ body {
       from var(--border-angle),
       #ffffff,
       #bf8cf2,
-      #f597b9, 
-      #ffffff 
+      #f597b9,
+      #ffffff,
+      #ffffff
 
-      /* #8fe4fe,
-      */
+      /* #8fe4fe, */
+
     ) border-box;
   border: 1px solid transparent;
 }
@@ -259,11 +258,64 @@ body {
     #ffffff,
     #bf8cf2,
     #f597b9,
-    #ffffff 
-   /* #8fe4fe,
-    */
+    #ffffff,
+    #ffffff
+   /* #8fe4fe, */
     
   );
-  filter: blur(3px);
+  filter: blur(4px);
   z-index: -2;
+}
+
+
+.footer-gradient {
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(10px); 
+  background: rgba(16, 13, 37, 0.4); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; 
+}
+
+.footer-gradient::before,
+.footer-gradient::after {
+  content: "";
+  position: absolute;
+  inset: -1px; 
+  z-index: -1;
+
+  background-size: 200% 100%; 
+  
+  /* 2. Jalankan animasi */
+  animation: gradient-move 4s linear infinite;
+}
+
+.footer-gradient::before {
+  opacity: 0.5; /* Naikkan sedikit agar terlihat */
+  background-image: 
+  linear-gradient(to right, #ffffff, #bf8cf2,   #f597b9, #8fe4fe, #ffffff);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border: 1px solid transparent;
+}
+
+.footer-gradient::after {
+  background-image: linear-gradient(
+    to right,
+    #ffffff, #8fe4fe, #bf8cf2, #f597b9, #ffffff
+  );
+  filter: blur(20px); 
+  opacity: 0.3;
+  z-index: -2;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
 }

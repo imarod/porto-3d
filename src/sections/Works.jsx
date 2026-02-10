@@ -10,65 +10,65 @@ import 'swiper/css/navigation';
 
 const projects = [
     {
-        title: "3D Solar System Planets to Explore",
-        description: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-        image: "/assets/projects/wordpress-theme.jpg",
+        title: "PPDB MAS Al Muhajirin",
+        description: "A fullstack admissions management system for MAS Al Muhajirin that provides automated status notifications for applicants.",
+        image: "/assets/projects/ppdb.webp",
         tech: [
-            { name: "react", icon: "/assets/tech/reactjs.png" },
-            { name: "three.js", icon: "/assets/tech/threejs.svg" },
-            { name: "typescript", icon: "/assets/tech/typescript.png" },
-            { name: "tailwind", icon: "/assets/tech/tailwind.png" }
+            { name: "Laravel", icon: "/assets/tech/laravel.svg" },
+            { name: "Vite Js", icon: "/assets/tech/vite.svg" },
+            { name: "MySql", icon: "/assets/tech/mysql.svg" },
+            { name: "Tailwind", icon: "/assets/tech/tailwind.png" }
         ],
-        link: "#"
+        link: "https://www.ppdb.ma-muhajirintgm.sch.id/"
     },
     {
-        title: "Yoom - Video Conferencing App",
-        description: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-        image: "/assets/projects/wordpress-theme.jpg",
+        title: "Bookshelf App",
+        description: "A React-based app for managing, categorizing, and searching books with dynamic state management and modern UI",
+        image: "/assets/projects/bookshelf.png",
         tech: [
-            { name: "react", icon: "/assets/tech/reactjs.png" },
-            { name: "three.js", icon: "/assets/tech/threejs.svg" },
-            { name: "typescript", icon: "/assets/tech/typescript.png" },
-            { name: "tailwind", icon: "/assets/tech/tailwind.png" }
+            { name: "React", icon: "/assets/tech/reactjs.png" },
+            { name: "Vite Js", icon: "/assets/tech/vite.svg" },
+            { name: "Javascript", icon: "/assets/tech/javascript.png" },
+            { name: "Tailwind", icon: "/assets/tech/tailwind.png" }
         ],
-        link: "#"
+        link: "https://imarod.github.io/Bookshelf/"
     },
     {
-        title: "Yoom - Video Conferencing App",
-        description: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-        image: "/assets/projects/wordpress-theme.jpg",
+        title: "Restaurants Catalog",
+        description: "A restaurant catalog app utilizing IndexedDB for offline data storage, showcasing restaurant details, and tested with Jest for reliability.",
+        image: "/assets/projects/resto.png",
         tech: [
-            { name: "react", icon: "/assets/tech/reactjs.png" },
-            { name: "three.js", icon: "/assets/tech/threejs.svg" },
-            { name: "typescript", icon: "/assets/tech/typescript.png" },
-            { name: "tailwind", icon: "/assets/tech/tailwind.png" }
+            { name: "Javascript", icon: "/assets/tech/javascript.png" },
+            { name: "Webpack", icon: "/assets/tech/webpack.svg" },
+            { name: "Jest", icon: "/assets/tech/jest.svg" }
         ],
-        link: "#"
+        link: "https://web-testing-alpha.vercel.app/"
     },
     {
-        title: "Yoom - Video Conferencing App",
-        description: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-        image: "/assets/projects/wordpress-theme.jpg",
+        title: "Notes App",
+        description: "A React-based web app for adding, deleting, and searching notes, utilizing state to manage data and array map to display the note list.",
+        image: "/assets/projects/noteapp.png",
         tech: [
-            { name: "react", icon: "/assets/tech/reactjs.png" },
-            { name: "three.js", icon: "/assets/tech/threejs.svg" },
-            { name: "typescript", icon: "/assets/tech/typescript.png" },
-            { name: "tailwind", icon: "/assets/tech/tailwind.png" }
+            { name: "React", icon: "/assets/tech/reactjs.png" },
+            { name: "Vite Js", icon: "/assets/tech/vite.svg" },
+            { name: "Javascript", icon: "/assets/tech/javascript.png" },
+            { name: "CSS", icon: "/assets/tech/css.png" }
         ],
-        link: "#"
+        link: "https://imarod.github.io/notes-app/"
     },
     {
-        title: "Yoom - Video Conferencing App",
-        description: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-        image: "/assets/projects/wordpress-theme.jpg",
+        title: "ColdBrew",
+        description: "A web app for searching alcoholic beverages via API, displaying detailed drink info with a responsive and dynamic UI.",
+        image: "/assets/projects/drink.png",
         tech: [
-            { name: "react", icon: "/assets/tech/reactjs.png" },
-            { name: "three.js", icon: "/assets/tech/threejs.svg" },
-            { name: "typescript", icon: "/assets/tech/typescript.png" },
-            { name: "tailwind", icon: "/assets/tech/tailwind.png" }
+            { name: "Javascript", icon: "/assets/tech/javascript.png" },
+            { name: "Postman", icon: "/assets/tech/postman.svg" },
+            { name: "Webpack", icon: "/assets/tech/webpack.svg" },
+            { name: "CSS", icon: "/assets/tech/css.png" }
         ],
-        link: "#"
+        link: "https://imarod.github.io/Cocktail-Recipes/"
     },
+
 
 ];
 
@@ -169,6 +169,7 @@ const ProjectCard = () => {
 
                                     <a
                                         href={project.link}
+                                        target="_blank"
                                         className="flex items-center gap-2 text-sm font-bold group"
                                     >
                                         VIEW PROJECT

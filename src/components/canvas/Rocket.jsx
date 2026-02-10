@@ -79,7 +79,7 @@ const RocketCanvas = () => {
     // }}
 
     >
-      <Suspense fallback={null}>
+      <Suspense fallback={<CanvasLoader />}>
         <ambientLight intensity={0.5} />
         <hemisphereLight skyColor="#ffffff" groundColor="#444444" intensity={0.5} />
 

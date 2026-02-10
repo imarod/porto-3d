@@ -68,7 +68,7 @@ const Tech = () => {
       </motion.div>
       <div className="flex flex-row flex-wrap justify-center gap-10 mt-10">
         {technologies.map((technology) => (
-          <div className="w-17 h-17 md:w-18 md:h-18 bg-[#100d25]/60 rounded-full border tech-stack-gradient flex items-center justify-center" key={technology.name}>
+          <div className="w-17 h-17 md:w-18 md:h-18  rounded-full border tech-stack-gradient flex items-center justify-center" key={technology.name}>
       
             <img src={technology.icon} alt={technology.name} className="w-12 h-12 md:w-13 md:h-13" />
           </div>
