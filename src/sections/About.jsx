@@ -54,7 +54,7 @@ const About = () => {
   ];
 
   return (
-    <div className='mt-[20vh] mx-auto c-space max-w-7xl justify-center'>
+    <div id='about' className='mt-[20vh] mx-auto c-space max-w-7xl justify-center'>
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}>
@@ -63,7 +63,7 @@ const About = () => {
       </motion.div>
       <motion.p
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
-       I have an educational background in Information Technology, complemented by a strong passion for coding and proven experience in building web applications. I am a detail-oriented coder, a problem-solving thinker, and a collaborative communicator. Furthermore, I am deeply committed to crafting unique, modern web designs that provide a distinctive visual identity while maintaining a seamless and engaging user experience.
+      I am Rodhiyati Mardhiyyah, a web developer with a strong passion for coding and hands-on experience in building web applications. I am a detail-oriented coder, a problem-solving thinker, and a collaborative communicator. Furthermore, I am deeply committed to crafting unique, modern web designs that provide a distinctive visual identity while maintaining a seamless and engaging user experience.
       </motion.p>
 
       {/* <div className='mt-20 flex flex-wrap gap-10'>

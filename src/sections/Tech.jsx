@@ -59,7 +59,7 @@ const Tech = () => {
 
 
   return (
-    <div className=" mx-auto c-space max-w-7xl justify-center">
+    <div id='tech-stack' className=" mx-auto c-space max-w-7xl justify-center">
        <motion.div
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}>

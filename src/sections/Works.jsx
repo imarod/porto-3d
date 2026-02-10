@@ -75,7 +75,7 @@ const projects = [
 
 const ProjectCard = () => {
     return (
-        <div className="py-20">
+        <div id='projects' className="py-20">
             <div className="max-w-7xl mx-auto c-space">
                 <div className="flex justify-between items-end mb-12">
                     <motion.div
