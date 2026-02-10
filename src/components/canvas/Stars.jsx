@@ -1,14 +1,14 @@
 import { useState, useRef, Suspense } from "react";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
-import * as THREE from "three";
+import { TextureLoader, AdditiveBlending } from "three";
 import CanvasLoader from '../Loader'
-import * as random from "maath/random/dist/maath-random.esm";
+import { inSphere } from "maath/random/dist/maath-random.esm";
 
 const Stars = (props) => {
   const ref = useRef();
-  const [sphere] = useState(() => random.inSphere(new Float32Array(15000 * 3), { radius: 7 }));
-  const texture = useLoader(THREE.TextureLoader, "/public/cyan-blue.png")
+  const [sphere] = useState(() => inSphere(new Float32Array(15000 * 3), { radius: 7 }));
+  const texture = useLoader(TextureLoader, "/public/cyan-blue.webp")
 
   useFrame((state, delta) => {
     ref.current.rotation.x += delta / 17;
@@ -26,7 +26,7 @@ const Stars = (props) => {
           size={0.01}
           sizeAttenuation={true}
           depthWrite={false}
-          blending={THREE.AdditiveBlending}
+          blending={AdditiveBlending}
         />
       </Points>
     </group>

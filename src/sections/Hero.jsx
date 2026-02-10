@@ -1,7 +1,7 @@
 
 import HeroText from "../components/HeroText"
 import ParallaxBackground from "../components/ParallaxBackground"
-import { Canvas, useFrame } from "@react-three/fiber"
+import { useFrame } from "@react-three/fiber"
 import { useMediaQuery } from "react-responsive"
 import { easing } from "maath"
 
@@ -11,8 +11,7 @@ const Hero = () => {
   return (
     <section className="flex items-start justify-center md:items-start md:justify-start min-h-screen overflow-hidden c-space">
       <HeroText />
-      <ParallaxBackground />
-      
+      <ParallaxBackground />      
     </section>
   )
 }
