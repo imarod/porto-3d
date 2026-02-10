@@ -1,4 +1,4 @@
-import{R as M,r as e,P,D as d,M as S,V as j,j as u,i as C,A as U,T as F}from"./index-BebKGK_q.js";import{_ as m,u as x,C as I,L as z,a as L}from"./Loader-CK9AbTeV.js";const W=()=>parseInt(M.replace(/\D+/g,"")),_=W(),b=_>=154?"opaque_fragment":"output_fragment";class D extends P{constructor(r){super(r),this.onBeforeCompile=(t,s)=>{const{isWebGL2:o}=s.capabilities;t.fragmentShader=t.fragmentShader.replace(`#include <${b}>`,`
+import{R as M,r as e,P,D as d,M as S,V as j,j as u,i as C,A as U,T as F}from"./index-1UsPf2xQ.js";import{_ as m,u as x,C as I,L as z,a as L}from"./Loader-Cqfq72H3.js";const W=()=>parseInt(M.replace(/\D+/g,"")),_=W(),b=_>=154?"opaque_fragment":"output_fragment";class D extends P{constructor(r){super(r),this.onBeforeCompile=(t,s)=>{const{isWebGL2:o}=s.capabilities;t.fragmentShader=t.fragmentShader.replace(`#include <${b}>`,`
         ${o?`#include <${b}>`:`#extension GL_OES_standard_derivatives : enable
 #include <${b}>`}
       vec2 cxy = 2.0 * gl_PointCoord - 1.0;
